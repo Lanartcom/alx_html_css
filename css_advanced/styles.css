@@ -452,3 +452,49 @@ p {
       width: 80%; /* Let cards expand to take up more space */
   }
 }
+/* FAQ Section Styling */
+.faq {
+  background-color: #f9f9f9; /* Light background color */
+  padding: 80px 0; /* Padding around the section */
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0A142F; /* Dark text color */
+  margin-bottom: 50px;
+}
+
+/* FAQ Container: Two columns on larger screens */
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 40px; /* Space between items */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* FAQ Item Styling */
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0A142F;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive Design: Single column on smaller screens */
+@media (max-width: 768px) {
+  .faq-container {
+      grid-template-columns: 1fr; /* Single column on small screens */
+      gap: 30px;
+  }
+}
