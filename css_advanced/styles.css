@@ -176,75 +176,201 @@ button {
       width: 80%; /* Expand profile cards on smaller screens */
   }
 }
-/* Testimonial Section */
+/* Testimonial Section Styling */
 .testimonial {
-  width: 1440px; /* Block width */
-  height: 392px; /* Block height */
   background-color: #C271FF; /* Violet background */
+  padding: 60px 0; /* Space around the section */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Center the section on the page */
 }
 
-/* Center content inside the testimonial */
 .testimonial-container {
   display: flex;
-  align-items: center; /* Vertically center the content */
+  align-items: center;
+  max-width: 900px; /* Maximum width for content */
   gap: 40px; /* Space between the image and text */
-  width: 100%;
-  padding: 0 40px; /* Inner padding */
 }
 
-/* Image Styling */
 .testimonial-image img {
   width: 150px;
   height: 150px;
   border-radius: 50%; /* Circular image */
-  object-fit: cover; /* Ensure image fills the container */
+  object-fit: cover; /* Ensure the image fits the container */
 }
 
-/* Text Styling */
 .testimonial-text {
-  color: white; /* All text is white */
-  font-family: 'Segoe UI', sans-serif;
-  max-width: 850px; /* Restrict the width of the text for readability */
+  color: white; /* White text for the quote, name, and job title */
+  max-width: 600px; /* Limit the width of the text */
 }
 
 blockquote {
-  font-size: 22px; /* Quote font size */
-  font-weight: normal; /* Regular font */
-  line-height: 1.4; /* Add line height for better readability */
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
   margin-bottom: 20px;
+  color: white; /* Ensure the quote text is white */
 }
 
 h3 {
-  font-size: 22px; /* Name font size */
-  font-weight: bold; /* Bold for the name */
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 p {
-  font-size: 22px; /* Job title font size */
-  font-style: italic; /* Italic for the job title */
-  margin-bottom: 0;
+  font-size: 16px;
+  font-style: italic;
+  color: #f0f0f0; /* Lighter color for the job title */
 }
 
 /* Responsive Design */
-@media (max-width: 1440px) {
-  .testimonial {
-      width: 100%; /* Make the section responsive */
-  }
-
+@media (max-width: 768px) {
   .testimonial-container {
       flex-direction: column;
+      align-items: center;
       text-align: center;
-      gap: 20px;
   }
 
   .testimonial-image img {
       width: 120px;
       height: 120px;
   }
+
+  .testimonial-text {
+      max-width: 90%;
+  }
+
+  blockquote {
+      font-size: 16px;
+  }
 }
 
+
+/* General Section Styling */
+.popular-tutorials {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.popular-tutorials h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.popular-tutorials .highlight {
+  color: #C271FF; /* Purple for "popular" */
+  font-weight: bold;
+}
+
+/* Tutorials Container */
+.tutorials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Tutorial Card Styling */
+.tutorial-card {
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tutorial-card h3 {
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+}
+
+.tutorial-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Thumbnail and Play Button */
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #C271FF;
+}
+
+/* Author Info */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.rating i {
+  color: #C271FF; /* Star color */
+  font-size: 16px;
+}
+
+/* Duration Styling */
+.duration {
+  font-size: 14px;
+  color: #C271FF;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .tutorials-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tutorial-card {
+      width: 90%;
+      max-width: 400px;
+  }
+}
