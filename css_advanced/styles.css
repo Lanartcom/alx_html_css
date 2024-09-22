@@ -53,6 +53,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .banner::before {
@@ -102,16 +103,19 @@ button {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 0;
 }
 /* General section styling */
 .learn-pros {
-  padding: 80px 0; /* Vertical padding */
+  padding: 80px;
+  padding-top: 30px;
   text-align: center;
   color: white;
+  background: transparent; /* Remove background color */
 }
 
 .learn-pros h2 {
-  font-size: 32px; /* Adjusted font size */
+  font-size: 32px; 
   font-weight: normal;
   margin-bottom: 40px;
 }
@@ -119,21 +123,22 @@ button {
 /* Styling for the word "Learn" */
 .highlight {
   color: #C271FF; /* Violet color */
-  font-weight: bold; /* Make it bold */
+  font-weight: bold;
 }
-
 
 /* Profiles Grid */
 .profiles {
   display: flex;
   justify-content: center;
-  gap: 50px; /* Increased space between profiles */
+  gap: 50px; /* Space between profile cards */
   align-items: flex-start;
 }
 
 .profile-card {
   text-align: center;
-  width: 160px; /* Fixed width for profile cards */
+  width: 160px;
+  background: transparent; /* Remove background from cards */
+  border: none; /* Remove border from cards */
 }
 
 .profile-card img {
@@ -145,37 +150,38 @@ button {
 }
 
 .profile-card h3 {
-  font-size: 18px; /* Adjusted font size for names */
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
+  color: #fff; /* Keep text white */
 }
 
 .profile-card p {
-  font-size: 16px; /* Adjusted font size for descriptions */
-  font-style: italic; /* Descriptions are italic */
-  color: #ccc; /* Lighter gray color */
+  font-size: 16px;
+  font-style: italic;
+  color: #ccc; /* Light gray color for descriptions */
   margin-bottom: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .profiles {
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
-      gap: 40px; /* Reduce gap on medium screens */
+    flex-wrap: wrap; /* Allow wrapping on medium screens */
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .profiles {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .profile-card {
-      width: 80%; /* Expand profile cards on smaller screens */
+    width: 80%; /* Expand profile cards on smaller screens */
   }
 }
+
 /* Testimonial Section Styling */
 .testimonial {
   background-color: #C271FF; /* Violet background */
@@ -258,6 +264,7 @@ p {
   font-size: 36px;
   margin-bottom: 50px;
   font-family: 'Segoe UI', sans-serif;
+  font-weight: lighter;
 }
 
 .popular-tutorials .highlight {
@@ -324,8 +331,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
+/* Align Author Info */
 .author {
   display: flex;
   align-items: center;
@@ -335,12 +344,12 @@ p {
 .author img {
   width: 30px;
   height: 30px;
-  border-radius: 50%; /* Circular avatar */
+  border-radius: 50%;
   object-fit: cover;
 }
 
 .author h4 {
-  font-size: 14px; /* Author name size */
+  font-size: 14px;
   font-weight: normal;
   color: #C271FF; /* Purple color for author's name */
 }
@@ -349,16 +358,18 @@ p {
 .rating-duration {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-start; /* Ensures stars and duration are next to each other */
+  gap: 10px; /* Adds space between stars and duration */
+  margin-top: 10px;
 }
 
 .rating {
   display: flex;
-  gap: 3px;
+  gap: 3px; /* Space between stars */
 }
 
 .rating i {
-  color: #C271FF; /* Star color */
+  color: #C271FF; /* Purple star color */
   font-size: 14px;
 }
 
@@ -368,8 +379,9 @@ p {
 
 .duration {
   font-size: 14px;
-  font-weight: 600; /* Semi-bold */
-  color: #C271FF; /* Purple color for duration */
+  font-weight: 600;
+  color: #C271FF;
+  margin-left: 10px; /* Space between stars and duration text */
 }
 
 /* Responsive Adjustments */
@@ -385,73 +397,85 @@ p {
   }
 }
 
-/* General section styling */
-.learn-pros {
-  padding: 50px 0;
-  background-color: #1f1f1f; /* Background dark similar to Figma design */
+/* Membership Section Styling */
+.membership {
+  background-color: #0A142F; /* Dark background */
+  padding: 80px 0; /* Add padding around the section */
   text-align: center;
-  color: white; /* Ensure text color is white to match the design */
+  color: white; /* Text color for the section */
 }
 
-.learn-pros h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
+.membership h2 {
+  font-size: 32px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 50px;
+}
+
+.membership .highlight {
+  color: #C271FF; /* Purple highlight */
   font-weight: bold;
-  color: #fff;
 }
 
-/* Profiles Grid */
-.profiles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
-  gap: 20px; /* Space between the cards */
-  justify-items: center; /* Center the content in each grid item */
+/* Membership Items */
+.membership-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
 }
 
-.profile-card {
+.membership-item {
+  flex: 1;
   text-align: center;
-  padding: 20px;
-  background-color: #292929; /* Dark background for the cards */
-  border-radius: 10px; /* Rounded corners */
-  width: 220px; /* Fixed width for uniformity */
 }
 
-.profile-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Circular avatar */
+.membership-item img {
+  width: 60px;
   margin-bottom: 20px;
-  object-fit: cover; /* Ensure the image fits perfectly */
 }
 
-.profile-card h3 {
+.membership-item h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fff;
+  color: white;
 }
 
-.profile-card p {
+.membership-item p {
   font-size: 14px;
-  color: #ccc; /* Lighter color for the description */
-  margin-bottom: 0;
+  color: #9faec5; /* Lighter gray for the paragraph text */
 }
 
-/* Responsive Design for smaller screens */
+/* Call to Action Button */
+.membership button {
+  margin-top: 50px;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff); /* Purple gradient */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.membership button:hover {
+  background: linear-gradient(135deg, #6a00e6, #c600e6); /* Darker gradient on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
-  .profiles {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  .membership-container {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .membership-item {
+      margin-bottom: 30px;
   }
 }
 
-@media (max-width: 768px) {
-  .profiles {
-      grid-template-columns: 1fr; /* 1 column on small screens */
-  }
 
-  .profile-card {
-      width: 80%; /* Let cards expand to take up more space */
-  }
-}
 /* FAQ Section Styling */
 .faq {
   background-color: #f9f9f9; /* Light background color */
@@ -460,7 +484,7 @@ p {
 }
 
 .faq h2 {
-  font-size: 36px;
+  font-size: 60px;
   font-family: 'Segoe UI', sans-serif;
   color: #0A142F; /* Dark text color */
   margin-bottom: 50px;
@@ -485,9 +509,9 @@ p {
 }
 
 .faq-item p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
-  color: #333;
+  color: #535353;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -496,5 +520,56 @@ p {
   .faq-container {
       grid-template-columns: 1fr; /* Single column on small screens */
       gap: 30px;
+  }
+}
+/* Footer Styling */
+.footer {
+  background-color: #0A142F; /* Dark background */
+  padding: 40px 0;
+  text-align: center;
+  color: #fff; /* White text for the entire footer */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  width: 100%;
+  padding: 0 20px; /* Add padding to ensure content doesn’t touch the edges */
+}
+
+.footer-left img {
+  width: 140px; /* Adjust the size of the logo */
+}
+
+.footer-right i {
+  color: white; /* White social icons */
+  font-size: 20px;
+  margin-left: 20px; /* Space between the social icons */
+}
+
+.footer-right i:hover {
+  color: #C271FF; /* Hover color for social icons */
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #9faec5; /* Lighter gray for copyright text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .footer-right {
+      margin-top: 20px;
   }
 }
