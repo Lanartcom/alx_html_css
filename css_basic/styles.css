@@ -65,19 +65,18 @@ img {
     display: flex;
     margin: 0 auto; 
     margin-top: 20px; 
-    margin-bottom: 20px; /* Add a bottom margin of 20 pixels */
-    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 20px; 
+    height: auto; 
     max-width: 300px;
 }
 
-/* Style for figcaption */
+
 figcaption {
     font-style: italic;
-    color: #666; /* Optional: Grey text color for the caption */
+    color: #666; 
     margin-top: 10px;
 }
 
-/* Optional: Style table inside article */
 table {
     width: 100%;
     border-collapse: collapse;
