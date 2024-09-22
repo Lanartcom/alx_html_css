@@ -1,0 +1,181 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    font-family:'Segoe UI', sans-serif;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;}
+   
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      margin-left: auto; /* Ensures links stay to the right */
+  }
+  
+  .nav-links a {
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+  }
+  
+  .logo {
+    margin-right: auto; 
+    height: 30px;
+    width: auto;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.banner {
+  height: 100vh; /* Full viewport height */
+  background: url('your-image-url.jpg') no-repeat center center/cover; /* Background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Make sure text appears above the overlay */
+  text-align: center;
+  color: white; /* White text as per design */
+}
+
+/* Main Heading */
+h1 {
+  font-size: 120px; /* Adjust according to Figma */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Subtext (SMILES, GRIN, LAUGH) */
+.sub-text {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between words */
+  font-size: 16px; /* Adjust according to Figma */
+  margin-bottom: 40px;
+}
+
+.sub-text span {
+  font-weight: bold;
+  opacity: 0.8; /* Slight opacity for secondary text */
+}
+
+/* Button Styling */
+button {
+  padding: 15px 30px;
+  background-color: #C271FF; /* Use exact purple from Figma */
+  border: none;
+  border-radius: 30px; /* Rounded corners for button */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* General section styling */
+.learn-pros {
+  padding: 80px 0; /* Vertical padding */
+  text-align: center;
+  color: white;
+}
+
+.learn-pros h2 {
+  font-size: 32px; /* Adjusted font size */
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+/* Styling for the word "Learn" */
+.highlight {
+  color: #C271FF; /* Violet color */
+  font-weight: bold; /* Make it bold */
+}
+.learn-pros .highlight {
+  color: #C271FF; /* Purple highlight for the word 'Learn' */
+  font-weight: bold;
+}
+
+/* Profiles Grid */
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Increased space between profiles */
+  align-items: flex-start;
+}
+
+.profile-card {
+  text-align: center;
+  width: 160px; /* Fixed width for profile cards */
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Circular avatar */
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.profile-card h3 {
+  font-size: 18px; /* Adjusted font size for names */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.profile-card p {
+  font-size: 16px; /* Adjusted font size for descriptions */
+  font-style: italic; /* Descriptions are italic */
+  color: #ccc; /* Lighter gray color */
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profiles {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      gap: 40px; /* Reduce gap on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .profiles {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .profile-card {
+      width: 80%; /* Expand profile cards on smaller screens */
+  }
+}
