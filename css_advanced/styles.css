@@ -121,10 +121,7 @@ button {
   color: #C271FF; /* Violet color */
   font-weight: bold; /* Make it bold */
 }
-.learn-pros .highlight {
-  color: #C271FF; /* Purple highlight for the word 'Learn' */
-  font-weight: bold;
-}
+
 
 /* Profiles Grid */
 .profiles {
@@ -179,3 +176,75 @@ button {
       width: 80%; /* Expand profile cards on smaller screens */
   }
 }
+/* Testimonial Section */
+.testimonial {
+  width: 1440px; /* Block width */
+  height: 392px; /* Block height */
+  background-color: #C271FF; /* Violet background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the section on the page */
+}
+
+/* Center content inside the testimonial */
+.testimonial-container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  gap: 40px; /* Space between the image and text */
+  width: 100%;
+  padding: 0 40px; /* Inner padding */
+}
+
+/* Image Styling */
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image fills the container */
+}
+
+/* Text Styling */
+.testimonial-text {
+  color: white; /* All text is white */
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 850px; /* Restrict the width of the text for readability */
+}
+
+blockquote {
+  font-size: 22px; /* Quote font size */
+  font-weight: normal; /* Regular font */
+  line-height: 1.4; /* Add line height for better readability */
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px; /* Name font size */
+  font-weight: bold; /* Bold for the name */
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 22px; /* Job title font size */
+  font-style: italic; /* Italic for the job title */
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .testimonial {
+      width: 100%; /* Make the section responsive */
+  }
+
+  .testimonial-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .testimonial-image img {
+      width: 120px;
+      height: 120px;
+  }
+}
+
