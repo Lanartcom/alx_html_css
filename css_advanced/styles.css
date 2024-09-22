@@ -251,7 +251,7 @@ p {
 .popular-tutorials {
   padding: 80px 0;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: white; /* White background */
 }
 
 .popular-tutorials h2 {
@@ -277,20 +277,18 @@ p {
 .tutorial-card {
   width: 280px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: left;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .tutorial-card h3 {
-  font-size: 18px;
+  font-size: 16px; /* Title size */
   margin: 15px 0 10px 0;
 }
 
 .tutorial-card p {
-  font-size: 14px;
+  font-size: 14px; /* Description size */
   color: #555;
   margin-bottom: 15px;
 }
@@ -302,8 +300,7 @@ p {
 
 .thumbnail img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  object-fit: cover; /* No borders or rounded corners */
 }
 
 .play-button {
@@ -322,44 +319,57 @@ p {
   color: #C271FF;
 }
 
-/* Author Info */
+/* Author Info and Rating */
+.author-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .author {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
 }
 
 .author img {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular avatar */
   object-fit: cover;
 }
 
 .author h4 {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 14px; /* Author name size */
+  font-weight: normal;
+  color: #C271FF; /* Purple color for author's name */
 }
 
-/* Rating Stars */
+/* Rating and Duration */
+.rating-duration {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .rating {
   display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
+  gap: 3px;
 }
 
 .rating i {
   color: #C271FF; /* Star color */
-  font-size: 16px;
+  font-size: 14px;
 }
 
-/* Duration Styling */
+.rating i.gray {
+  color: lightgray; /* Light gray color for the last star */
+}
+
 .duration {
   font-size: 14px;
-  color: #C271FF;
-  font-weight: bold;
-  text-align: right;
+  font-weight: 600; /* Semi-bold */
+  color: #C271FF; /* Purple color for duration */
 }
 
 /* Responsive Adjustments */
@@ -372,5 +382,73 @@ p {
   .tutorial-card {
       width: 90%;
       max-width: 400px;
+  }
+}
+
+/* General section styling */
+.learn-pros {
+  padding: 50px 0;
+  background-color: #1f1f1f; /* Background dark similar to Figma design */
+  text-align: center;
+  color: white; /* Ensure text color is white to match the design */
+}
+
+.learn-pros h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Profiles Grid */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 20px; /* Space between the cards */
+  justify-items: center; /* Center the content in each grid item */
+}
+
+.profile-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #292929; /* Dark background for the cards */
+  border-radius: 10px; /* Rounded corners */
+  width: 220px; /* Fixed width for uniformity */
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular avatar */
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensure the image fits perfectly */
+}
+
+.profile-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.profile-card p {
+  font-size: 14px;
+  color: #ccc; /* Lighter color for the description */
+  margin-bottom: 0;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+  .profiles {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .profiles {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+
+  .profile-card {
+      width: 80%; /* Let cards expand to take up more space */
   }
 }
