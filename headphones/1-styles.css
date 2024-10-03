@@ -53,42 +53,42 @@
 
 .first-section {
     background-image: url(images/Object.png);
-    height: 500px;
-    padding: 100px 20px; 
+ 
+    padding: 100px 20px;
     color: var(--font-color);
     text-align: center;
     background-size: cover;
     background-position: center;
-    border: none;
     margin-top: -135px;
 }
 
 .first-section h2 {
-    padding-top: 230px;
-    padding-bottom: 0;
+    margin-top:300px;
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 32px;
     color: var(--color-white-100);
+    font-weight: bold;
 }
 
 #first-paragraph {
-    color: var(--color-white-100);
     margin-top: -10px;
-    font-size: 15px;
-    max-width: 600px; 
+    font-size: 16px;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+    font-weight: 900;
+    color: var(--color-white-100);
 }
 
 #second-paragraph {
-    color: var(--color-white-75);
-    padding-top: 20px;
-    max-width: 700px;  
+    margin-top: 20px;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto;  
-    text-align: center; 
-    font-size: 18px;     
-    line-height: 1.6;    
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-white-75);
+    text-align: center;
 }
 
 button {
@@ -119,12 +119,13 @@ button:hover {
     text-align: center;
     padding: 120px 0 50px 0;
     font-weight: var(--font-weight);
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: bolder;
 }
 .media{
     display: flex;
-    gap: 50px;
-    padding-left: 150px;
+    gap: 80px;
+    padding-left: 450px;
     padding-right: 150px;
     padding-top: 80px;
 }
@@ -138,15 +139,18 @@ button:hover {
     color: var(--color-white-25);
     color: black;
     text-align: center;
+    font-size: 18px;
 }
 .media-description{
     color: var(--color-white-75);
     padding-top: 20px;
-    max-width: 500px;  
+    max-width: 200px;  
     text-align: left; 
     font-size: 18px;     
     line-height: 1.6;
     color: black;  
+    font-size: 14px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
